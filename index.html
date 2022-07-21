@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>SPLI-TTER</title>
+</head>
+<body class="font-spaceMono text-slate-50 bg-slate-200">
+    <h1 class="text-center uppercase tracking-2 text-2xl mt-20 text-slate-600 md:mt-36">spli<br />tter</h1>
+    <div class="container bg-slate-50 mx-auto max-w-5xl text-slate-900 mt-20 p-8 rounded-md flex flex-col shadow-lg md:flex-row">
+        <div class="w-full mx-3 md:w-1/2">
+            <div class="mb-8">
+                <h3 class="mb-1">Bill</h3>
+                <div class="flex justify-between bg-slate-200 border-2 focus-within:border-2 focus-within:border-slate-900 ">
+                    <p class="p-4 text-xl text-slate-400">$</p>
+                    <input type="text" placeholder="0" id="bill-amount" class="text-right bg-slate-200 p-4 text-xl w-full placeholder:text-slate-400 focus:outline-none">
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="mb-1">Select Tip %</h3>
+                <div class="grid grid-cols-3 grid-rows-2 gap-2">
+                    <button type="button" value="0.05" class="btn tip-option">5%</button>
+                    <button type="button" value="0.1" class="btn tip-option btn-selected">10%</button>
+                    <button type="button" value="0.15" class="btn tip-option">15%</button>
+                    <button type="button" value="0.25" class="btn tip-option">25%</button>
+                    <button type="button" value="0.50" class="btn tip-option">50%</button>
+                    <button type="button" value="1" class="btn tip-option">100%</button>
+                    <!-- <input type="text" placeholder="Custom" id="custom-tip" class="text-center bg-slate-200 border-2 focus:border-2 focus:border-slate-900 focus:outline-none placeholder:text-slate-400"> -->
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="mb-1">Number of People</h3>
+                <div class="flex justify-between bg-slate-200 border-2 focus-within:border-2 focus-within:border-slate-900 ">
+                    <p class="p-4 text-xl text-slate-400"><i class="fa-solid fa-user"></i></p>
+                    <input type="text" placeholder="0" id="people-amount" class="text-right bg-slate-200 p-4 text-xl w-full placeholder:text-slate-400 focus:outline-none">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full mx-3 p-8 bg-slate-800 text-slate-50 rounded-md md:w-1/2">
+            <div class="h-full flex flex-col justify-between">
+                <div class="flex justify-between items-center w-full mb-8">
+                    <p class="flex flex-col text-md lg:text-xl">Tip Amount <span class="text-xs md:text-sm text-slate-400">/ person</span></p>
+                    <p id="tip-amount" class="text-2xl md:text-3xl lg:text-4xl">$0,00</p>
+                </div>
+
+                <div class="flex justify-between items-center w-full mb-8">
+                    <p class="flex flex-col text-md lg:text-xl">Total <span class="text-xs md:text-sm text-slate-400">/ person</span></p>
+                    <p id="total" class="text-2xl md:text-3xl lg:text-4xl">$0,00</p>
+                </div>
+
+                <div class="flex justify-between items-center w-full mb-8">
+                    <p class="flex flex-col text-md lg:text-xl">Total Bill <span class="text-xs md:text-sm text-slate-400">/ incl. tip</span></p>
+                    <p id="total-tip" class="text-2xl md:text-3xl lg:text-4xl">$0,00</p>
+                </div>
+
+                <button type="button" id="reset-button" class="border-2 border-slate-50 uppercase w-full bg-slate-50 text-slate-900 p-4 transition-smooth text-lg hover:bg-slate-800 hover:text-slate-50">reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
